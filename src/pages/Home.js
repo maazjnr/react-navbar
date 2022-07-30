@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const Home = () => {
-    const [homeDetails, setHomeDetails] = useState([]);
+    const [homeDetails, setHomeDetails] = useState([{}]);
 
     const options = {
         method: 'GET',
@@ -22,8 +22,7 @@ const Home = () => {
             return (
                 <div key={item.id}>
 
-                    <img src={item.image} alt="" />
-                    <h6>{item.title}</h6>
+                    <img src={item} alt="" />
 
                 </div>
             )
