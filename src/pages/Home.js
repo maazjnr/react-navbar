@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const Home = () => {
-    const [homeDetails, setHomeDetails] = useState([]);
+    const [homeDetails, setHomeDetails] = useState([])
 
     const options = {
         method: 'GET',
@@ -11,9 +11,9 @@ const Home = () => {
         }
     };
     
-    fetch('https://hotels4.p.rapidapi.com/properties/get-hotel-photos?id=1178275040', options)
+    fetch('https://hotels4.p.rapidapi.com/properties/list?destinationId=1506246&pageNumber=1&pageSize=25&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&sortOrder=PRICE&locale=en_US&currency=USD', options)
         .then(response => response.json())
-        .then(response => setHomeDetails(response))
+        .then(response => console.log(response))
         .catch(err => console.error(err));
     
         return(
