@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const Home = () => {
-    const [homeDetails, setHomeDetails] = useState([{}]);
+    const [homeDetails, setHomeDetails] = useState([]);
 
     const options = {
         method: 'GET',
@@ -15,20 +15,18 @@ const Home = () => {
         .then(response => response.json())
         .then(response => setHomeDetails(response))
         .catch(err => console.error(err));
-    return(
-        
-        <div>
-           {homeDetails.map((item) => {
-            return (
-                <div key={item.id}>
-
-                    <img src={item} alt="" />
-
-                </div>
-            )
-        })}
-        </div>
-    )
+    
+        return(
+            <div>
+                {setHomeDetails.map((item) => {
+                    return(
+                        <div>
+                            {item}
+                        </div>
+                    )
+                })}
+            </div>
+        )
 }
 
 export default Home;
