@@ -1,12 +1,13 @@
 import React from "react";
 
-const Home = () => {
+const Home = () => { 
 
     return(
         
         <div>
             <h1>Hello Africa</h1>
         </div>
+
     )
 }
 
